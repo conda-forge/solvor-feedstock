@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.6.2"
+  version: "0.6.3"
   python_min: "3.12"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/solvor/solvor-${{ version }}.tar.gz
-  sha256: fe9cea887b0d2abf107d332082b97b061289292bc8b1f8f7d7c086dac3a9a7ae
+  sha256: 8a573e48c7c599e8937bc3fec41a36348dc75e02134b308a7795072ca29e706f
 
 build:
-  number: 2
+  number: 0
   script:
     - pushd rust && cargo-bundle-licenses --format yaml --output ../THIRDPARTY.yml && popd
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
