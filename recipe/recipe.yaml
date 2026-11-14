@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   version: "1.0.0"
-  python_min: "3.12"
+  python_min: "3.13"
 
 package:
   name: solvor
